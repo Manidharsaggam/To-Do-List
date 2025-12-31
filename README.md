@@ -84,7 +84,7 @@ Folders are collapsed by default and expand on click.
 ### Folder View
 ![Folder View](screenshots/delete-open.png)
 
-
+```
 
 
 🧪 How to Run Locally
