@@ -11,16 +11,25 @@
         body {
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background: linear-gradient(135deg, #667eea, #764ba2);
+
             min-height: 100vh;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;   /* horizontal center */
+            align-items: center;       /* vertical center */
+
             padding: 20px;
         }
         .container {
-            width: 420px;
-            margin: 20px auto; 
+            width: 100%;
+            max-width: 420px;
+            max-height: 90vh;
             background: #ffffff;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+             overflow-y: auto;
         }
         h2 { text-align: center; color: #333; }
         .task-stats {
@@ -48,6 +57,11 @@
             border: none; padding: 10px 16px;
             border-radius: 6px;
         }
+        #taskList {
+            max-height: 50vh;
+            overflow-y: auto;
+        }
+
         li {
             background: #f6f7fb;
             margin-bottom: 10px;
