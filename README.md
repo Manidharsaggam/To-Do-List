@@ -75,14 +75,14 @@ Folders are collapsed by default and expand on click.
 ### Folder View
 ![Folder View](screenshots/folder-open.png)
 
-### Folder View
-![Folder View](screenshots/taask-progress-open.png)
+### taask-progress
+![Folder View](screenshots/taask-progress.png)
 
 ### Folder View
-![Folder View](screenshots/edit-open.png)
+![Folder View](screenshots/edit.png)
 
-### Folder View
-![Folder View](screenshots/delete-open.png)
+### Folder Viewdit
+![Folder View](screenshots/delete.png)
 
 ```
 
