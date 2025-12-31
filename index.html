@@ -96,6 +96,82 @@
             flex: 1;
             padding: 6px;
         }
+
+                
+        /* 📱 Small Phones (≤ 480px) */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                width: 100%;
+                margin: 10px auto;
+                padding: 18px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .add-form {
+                gap: 6px;
+            }
+
+            .add-form input,
+            .add-form button {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            li div:last-child {
+                align-self: flex-end;
+            }
+
+            button {
+                min-height: 44px; /* touch-friendly */
+            }
+        }
+
+        /* 📱 Large Phones (481px – 600px) */
+        @media (min-width: 481px) and (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+        }
+
+        /* 📱 Tablets (601px – 900px) */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .container {
+                width: 85%;
+            }
+        }
+
+        /* 💻 Laptops (901px – 1200px) */
+        @media (min-width: 901px) and (max-width: 1200px) {
+            .container {
+                width: 420px;
+            }
+        }
+
+        /* 🖥️ Large Desktops (≥ 1201px) */
+        @media (min-width: 1201px) {
+            .container {
+                width: 460px;
+            }
+        }
+
+
+
+
+
+
     </style>
 </head>
 
