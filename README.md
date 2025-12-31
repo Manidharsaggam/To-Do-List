@@ -72,19 +72,17 @@ Folders are collapsed by default and expand on click.
 ### Main Dashboard
 ![Dashboard](screenshots/home.png)
 
-### Folder View
+### Folder-Open View
 ![Folder View](screenshots/folder-open.png)
 
-### taask-progress
+### Task-Progress View
 ![Folder View](screenshots/taask-progress.png)
 
-### Folder View
+### Edit View
 ![Folder View](screenshots/edit.png)
 
-### Folder Viewdit
+### Delete View
 ![Folder View](screenshots/delete.png)
-
-```
 
 
 🧪 How to Run Locally
@@ -93,24 +91,23 @@ Clone the repository
 ```
 git clone https://github.com/Manidharsaggam/To-Do-List.git
 ```
-
 Open the project folder
 ```
 cd To-Do-List
 ```
-
 Run the app
-
 ```
 Open index.html in your browser
-
 (Recommended: use VS Code Live Server)
 ```
 👨‍💻 Author
 
-Manidhar Saggam
+Manidhar Saggam 
+
 GitHub: @Manidharsaggam
 
 ⭐ Support
 
 If you like this project, give it a star ⭐ on GitHub!
+
+
