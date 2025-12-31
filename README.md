@@ -72,11 +72,11 @@ Folders are collapsed by default and expand on click.
 ### Main Dashboard
 ![Dashboard](screenshots/home.png)
 
-### Folder View
+### Folder-Open
 ![Folder View](screenshots/folder-open.png)
 
 ### taask-progress
-![Folder View](screenshots/taask-progress.png)
+![Folder View](screenshots/taask- progress.png)
 
 ### Folder View
 ![Folder View](screenshots/edit.png)
@@ -114,4 +114,5 @@ GitHub: @Manidharsaggam
 ⭐ Support
 
 If you like this project, give it a star ⭐ on GitHub!
+
 
