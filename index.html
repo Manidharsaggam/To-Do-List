@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do-List</title>
+    <link rel="icon" sizes="16x16" href="icon.png">
+    <style>
+        /* 🔽 YOUR ORIGINAL CSS (UNCHANGED) */
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 420px;
+            margin: 20px auto; 
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        h2 { text-align: center; color: #333; }
+        .task-stats {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .task-stats .badge {
+            display: inline-block;
+            margin-bottom: 10px; /* 👈 pushes progress bar down */
+            background: #667eea;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+        .progress { height: 6px; background: #e0e0e0; border-radius: 5px; }
+        .progress-bar { height: 100%; background: #27ae60; }
+        .filters { text-align: center; margin-bottom: 15px; }
+        .filters a { margin: 0 5px; color: #667eea; cursor: pointer; }
+        .add-form { display: flex; gap: 10px; margin-bottom: 20px; }
+        .add-form input { flex: 1; padding: 10px; }
+        .add-form button {
+            background: #667eea; color: white;
+            border: none; padding: 10px 16px;
+            border-radius: 6px;
+        }
+        li {
+            background: #f6f7fb;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .done { text-decoration: line-through; color: #999; }
+        .delete-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;   /* 👈 pointer */
+            font-size: 12px;
+        }
+
+        .delete-btn:hover {
+            opacity: 0.9;
+        }
+
+        .edit-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .edit-btn:hover {
+            opacity: 0.9;
+        }
+
+        .edit-form {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .edit-form input {
+            flex: 1;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>To-Do List</h2>
+
+    <!-- TASK STATS -->
+    <div class="task-stats">
+        <span class="badge" id="stats"></span>
+        <div class="progress">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters">
+        <a onclick="setFilter('all')">All</a> |
+        <a onclick="setFilter('completed')">Completed</a> |
+        <a onclick="setFilter('pending')">Pending</a>
+    </div>
+
+    <!-- ADD TASK -->
+<div class="add-form" style="flex-direction:column; gap:8px;">
+
+    <input type="date" id="dayInput">
+
+    <!-- CHOOSE TYPE -->
+    <div style="display:flex; gap:15px; font-size:13px;">
+        <label>
+            <input type="radio" name="taskType"
+                   value="task"
+                   checked
+                   onchange="toggleFolder(false)">
+            Just a task
+        </label>
+
+        <label>
+            <input type="radio" name="taskType"
+                   value="folder"
+                   onchange="toggleFolder(true)">
+            Task inside folder
+        </label>
+    </div>
+
+    <!-- FOLDER INPUT -->
+    <input id="folderInput"
+           placeholder="Folder name (DSA / Django / JS)"
+           style="display:none;">
+
+    <input id="taskInput"
+           placeholder="Add new task">
+
+    <button onclick="addTask()">Add</button>
+</div>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

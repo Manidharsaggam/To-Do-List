@@ -1,0 +1,11 @@
+.container {
+  width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
