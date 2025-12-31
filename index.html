@@ -30,6 +30,8 @@
             border-radius: 12px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
              overflow-y: auto;
+             display: flex;
+            flex-direction: column;
         }
         h2 { text-align: center; color: #333; }
         .task-stats {
@@ -110,6 +112,57 @@
             flex: 1;
             padding: 6px;
         }
+
+
+
+        /* 📱 Mobile App Layout */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        height: 100vh;
+        max-width: 100%;
+        margin: 0;
+
+        border-radius: 0;
+        box-shadow: none;
+        padding: 16px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 🔼 Top section (inputs & controls) */
+    .add-form,
+    .filters,
+    .task-stats {
+        flex: 0 0 auto;
+    }
+
+    /* 🔽 Task list takes remaining space */
+    #taskList {
+        flex: 1;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .task-stats,
+    .filters,
+    .add-form {
+        max-height: 75vh;
+        overflow-y: auto;
+    }
+
+    #taskList {
+        max-height: 25vh;
+        overflow-y: auto;
+    }
+}
+
 
                 
         /* 📱 Small Phones (≤ 480px) */
