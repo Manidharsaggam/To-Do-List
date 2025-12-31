@@ -3,6 +3,8 @@
 <head>
     <title>To-Do-List</title>
     <link rel="icon" sizes="16x16" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
     <style>
         /* 🔽 YOUR ORIGINAL CSS (UNCHANGED) */
         * { box-sizing: border-box; }
@@ -156,5 +158,9 @@
 
 <script src="js/db.js"></script>
 <script src="js/app.js"></script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"));
+}
 </body>
 </html>
