@@ -153,6 +153,25 @@
             }
         }
 
+        /* 📱 Mobile full-height stretch */
+@media (max-width: 600px) {
+    body {
+        align-items: stretch; /* remove vertical centering */
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        max-height: 100vh;
+        height: 100vh;
+
+        border-radius: 0;      /* full-screen app feel */
+        box-shadow: none;      /* remove card shadow */
+
+        padding: 16px;
+    }
+}
+
         /* 📱 Large Phones (481px – 600px) */
         @media (min-width: 481px) and (max-width: 600px) {
             .container {
