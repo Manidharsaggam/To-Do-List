@@ -2,9 +2,15 @@ let filter = "all";
 let editId = null;
 let openFolders = {}; // day__folder => true/false
 
+
 /* Set today as default date */
 window.onload = () => {
-    dayInput.value = new Date().toISOString().split("T")[0];
+    const today = new Date();
+    const localDate = today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+
+    document.getElementById("dayInput").value = localDate;
 };
 
 /* SHOW / HIDE FOLDER INPUT */
@@ -210,3 +216,42 @@ function loadTasks() {
         }
     });
 }
+
+/* =========================
+   AUTO DAILY DATE UPDATE
+   ========================= */
+
+function setTodayDate() {
+    const now = new Date();
+
+    const localDate =
+        now.getFullYear() + "-" +
+        String(now.getMonth() + 1).padStart(2, "0") + "-" +
+        String(now.getDate()).padStart(2, "0");
+
+    document.getElementById("dayInput").value = localDate;
+}
+
+function scheduleMidnightUpdate() {
+    const now = new Date();
+
+    const nextMidnight = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate() + 1,
+        0, 0, 0, 0
+    );
+
+    const msUntilMidnight = nextMidnight - now;
+
+    setTimeout(() => {
+        setTodayDate();
+        scheduleMidnightUpdate(); // repeat every day
+    }, msUntilMidnight);
+}
+
+/* Run on load */
+window.addEventListener("load", () => {
+    setTodayDate();
+    scheduleMidnightUpdate();
+});
